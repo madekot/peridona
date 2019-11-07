@@ -26,6 +26,7 @@ body {
 .link {
     display: inline-block;
     text-decoration: none;
+    vertical-align: top;
 }
 
 .image {
@@ -80,6 +81,16 @@ body {
     flex-wrap: wrap;
 }
 
+.navigation .logo__link {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.navigation .logo__image {
+    width: 116px;
+    height: 27px;
+}
+
 .navigation__logo {
     margin-right: auto;
 }
@@ -110,55 +121,10 @@ body {
 
 /*logo*/
 
-.logo--name-peridona .logo__link {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.logo__link {
+    width: 100%;
 }
 
-.logo--name-peridona .logo__image {
-    width: 116px;
-    height: 27px;
-}
-
-
-.logo--name-alisa {
-    flex-grow: 1;
-}
-
-.logo--name-alisa .logo__image {
-    width: 87px;
-    height: 42px;
-}
-
-
-.logo--name-natural {
-    flex-grow: 1;
-}
-
-.logo--name-natural .logo__image {
-    width: 106px;
-    height: 29px;
-}
-
-
-.logo--name-microwave {
-    flex-grow: 1;
-}
-
-.logo--name-microwave .logo__image {
-    width: 141px;
-    height: 22px;
-}
-
-
-.logo--name-urban {
-  flex-grow: 1;
-}
-
-.logo--name-urban .logo__image {
-    width: 96px;
-    height: 26px;
-}
 
 /*main*/
 .main__organization-info-wrapper {
@@ -219,7 +185,7 @@ body {
 .main__banner {
     padding-top: 92px;
     position: relative;
-    bottom: -130px;
+    bottom: -132px;
 }
 
 /*organization-info */
@@ -275,8 +241,6 @@ body {
 
 
 /*.banner*/
-.banner {}
-
 .banner__grid {
     display: grid;
     grid-template-columns: 470px 100px 600px;
@@ -366,15 +330,9 @@ body {
     align-items: start;
 }
 
-.banner-logo__item {
-    width: 25%;
-    /*min-height: 130px;*/
-    display: flex;
-    align-items: center;
-}
-
 .banner-logo__list {
-    flex-shrink: 0;
+    padding-left: 30px;
+    padding-right: 14px;
     background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
@@ -383,3 +341,48 @@ body {
             0 0 10px 2px rgba(64, 64, 64, 0.3);
 }
 
+/*.banner-logo-list*/
+.logo-list {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow:
+            inset 0 -7px #858da9,
+            0 0 10px 2px rgba(64, 64, 64, 0.3);
+}
+
+.logo-list .logo__link {
+    box-sizing: border-box;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.logo-list .logo__link {
+    padding-top: 55px;
+    padding-bottom: 47px;
+}
+
+.logo-list__item--alisa .logo__image {
+    width: 87px;
+    height: 42px;
+}
+
+.logo-list__item--alisa .logo__link {
+    padding-top: 46px;
+    padding-bottom: 36px;
+}
+
+.logo-list__item--natural .logo__image {
+    width: 106px;
+    height: 29px;
+}
+
+.logo-list__item--microwave .logo__image {
+    width: 141px;
+    height: 22px;
+}
+
+.logo-list__item--urban .logo__image {
+    width: 96px;
+    height: 26px;
+}
