@@ -2,6 +2,18 @@ body {
     margin: 0;
 }
 
+/*trapeze*/
+.trapeze {
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 50px;
+    background: white;
+    background: linear-gradient(-47deg, transparent 37px, white 0) right,
+    linear-gradient(49deg, transparent 37px, white 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
 /*text*/
 .text {
     margin-top: 0;
@@ -20,10 +32,19 @@ body {
 
 .text--size-l {
     font-size: 36px;
-    font-weight: 500; /*bold = 700*/
+    font-weight: 700; /*bold = 700*/
+}
+
+.text--color-light {
+    color: #ffffff;
+}
+
+.text--color-dark {
+    color: #082362;
 }
 
 .link {
+    font-family: 'Rubik', 'Arial', sans-serif;
     display: inline-block;
     text-decoration: none;
     vertical-align: top;
@@ -35,26 +56,21 @@ body {
     height: auto;
 }
 
-.page {
-    font-family: 'Rubik', 'Arial', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.page__main-wrapper {
+/*page*/
+.page__wrapper {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .page__header-wrapper {
-    width: 100%;
     background-color: #ffffff;
 }
 
 .page__inner {
     width: 1170px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -83,8 +99,8 @@ body {
 
 .navigation__logo {
     margin-right: auto;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px;
+    margin-left: -14px;
 }
 
 .navigation__site {
@@ -93,7 +109,7 @@ body {
 }
 
 /*navigation-site*/
-.navigation-site__list {
+.navigation-site {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -101,22 +117,29 @@ body {
     flex-wrap: wrap;
 }
 
+.navigation-site__item {
+
+}
+
 .navigation-site__link {
-    text-transform: uppercase;
-    padding: 20px;
+    font-size: 15px;
     font-weight: 500;
+    line-height: 1.44;
+    text-transform: uppercase;
     color: #0a1c51;
     background-color: #ffffff;
-    font-size: 15px;
-    line-height: 1.44;
+    padding: 20px;
 }
 
 /*main*/
 .main__organization-info-wrapper {
     margin-bottom: -52px;
     box-shadow:  0 -1px #55789c, 0 -5px #00346a, inset 0 5px #10205a;
-    width: 100%;
     background-color: #091a51;
+}
+
+.main__wrapper {
+    background-color: #ffffff;
 }
 
 .main__inner {
@@ -126,38 +149,26 @@ body {
     margin: 0 auto;
 }
 
-.main__organization-info-content {
-    display: inline-block;
-    position: relative;
-    z-index: 10;
-    margin-right: -110px;
-    margin-left: auto;
-}
-
 .main__organization-info {
     display: flex;
+    position: relative;
+    z-index: 10;
 }
 
-.organization-info--slyle-trapeze {
-    min-height: 50px;
-    background: white;
-    background: linear-gradient(-47deg, transparent 37px, white 0) right,
-    linear-gradient(49deg, transparent 37px, white 0) left;
-    background-size: 50% 100%;
-    background-repeat: no-repeat;
+.main__organization-info-content {
     box-sizing: border-box;
-    padding: 0 109px 0 116px;
+    padding: 0 87px 0 117px;
+    margin-left: auto;
+    position: relative;
+    right: -105px;
 }
 
 .main__banner-box {
     background-color: transparent;
-    border-bottom: 1px solid transparent;
+    border-bottom: 0.1px solid transparent;
 }
 
 .main__banner-wrapper {
-    max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     background-color: #08174d;
     background-image: url(image/banner__bg.jpg);
@@ -173,35 +184,45 @@ body {
     bottom: -133px;
 }
 
+.main__form-and-about-us {
+    display: grid;
+    grid-template-columns: minmax(auto, 500px) minmax(auto, 600px);
+    grid-column-gap: 70px;
+}
+
+.form-and-about-us__item {
+    grid-column: auto / 1 span;
+}
+
 /*organization-info */
 .organization-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
     font-size: 15px;
     line-height: 1.44;
     font-weight: 400;
+
 }
 
-.organization__link {
+.organization-info__link {
     background-color: #ffffff;
     color: #131f4f;
     padding-top: 20px;
     padding-bottom: 13px;
 }
 
-.organization__link--size-time {
+.organization-info__link--size-l {
     padding-right: 30px;
 }
 
-.organization__link--size-email {
+.organization-info__link--size-m {
     padding-right: 20px;
 }
 
-.organization-info__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .organization__icon {
     background-repeat: no-repeat;
@@ -329,27 +350,27 @@ body {
     width: 100%;
 }
 
-.logo__image--size-peridona {
+.logo__image--name-peridona {
     width: 116px;
     height: 27px;
 }
 
-.logo__image--size-natural {
+.logo__image--name-natural {
     width: 106px;
     height: 29px;
 }
 
-.logo__image--size-microwave {
+.logo__image--name-microwave {
     width: 141px;
     height: 22px;
 }
 
-.logo__image--size-urban {
+.logo__image--name-urban {
     width: 96px;
     height: 26px;
 }
 
-.logo__image--size-alisa {
+.logo__image--name-alisa {
     width: 87px;
     height: 42px;
 }
