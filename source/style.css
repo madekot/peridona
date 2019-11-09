@@ -2,18 +2,6 @@ body {
     margin: 0;
 }
 
-/*trapeze*/
-.trapeze {
-    padding-left: 50px;
-    padding-right: 50px;
-    min-height: 50px;
-    background: white;
-    background: linear-gradient(-47deg, transparent 37px, white 0) right,
-    linear-gradient(49deg, transparent 37px, white 0) left;
-    background-size: 50% 100%;
-    background-repeat: no-repeat;
-}
-
 /*text*/
 .text {
     margin-top: 0;
@@ -41,6 +29,58 @@ body {
 
 .text--color-dark {
     color: #082362;
+}
+
+.button {
+    vertical-align: top;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #082362;
+    padding: 0;
+    border: none;
+}
+
+/*fieldset*/
+.fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.textarea {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/*input*/
+.input {
+    border: none;
+    box-shadow: inset 2px 2px #dddddd, inset 0 -2px #dddddd, inset -2px 0 #dddddd;
+    box-sizing: border-box;
+}
+
+/*visually-hidden*/
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/*trapeze*/
+.trapeze {
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 50px;
+    background: white;
+    background: linear-gradient(-47deg, transparent 37px, white 0) right,
+    linear-gradient(49deg, transparent 37px, white 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
 }
 
 .link {
@@ -165,7 +205,7 @@ body {
 
 .main__banner-box {
     background-color: transparent;
-    border-bottom: 0.1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .main__banner-wrapper {
@@ -185,13 +225,8 @@ body {
 }
 
 .main__form-and-about-us {
-    display: grid;
-    grid-template-columns: minmax(auto, 500px) minmax(auto, 600px);
-    grid-column-gap: 70px;
-}
-
-.form-and-about-us__item {
-    grid-column: auto / 1 span;
+    padding-top: 117px;
+    padding-bottom: 117px;
 }
 
 /*organization-info */
@@ -247,7 +282,7 @@ body {
 
 
 /*.banner*/
-.banner__grid {
+.banner {
     display: grid;
     grid-template-columns: 470px 100px 600px;
 }
@@ -399,3 +434,147 @@ body {
     padding-top: 46px;
 }
 
+/*about-us*/
+.about-us {
+    font-size: 16px;
+    line-height: 1.625;
+    background-color: #ffffff;
+    color: #707070;
+}
+
+.about-us__text-box {
+    margin-bottom: 53px;
+}
+
+.about-us__text:last-child {
+    margin-bottom: 0;
+}
+
+.about-us__title {
+    padding-top: 31px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.about-us__subtitle--icon::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 113px;
+    background-color: #082362;
+    margin-left: 7px;
+}
+
+.about-us__subtitle {
+    letter-spacing: 1px;
+    margin-bottom: 19px;
+}
+
+.about-us__text {
+    margin-bottom: 16px;
+}
+
+.about-us__text--size {
+    font-weight: 500;
+}
+
+.about-us__table {
+    /*padding-right: 100px;*/
+}
+
+.about-us-table__row {
+    display: block;
+}
+
+.about-us-table__row:last-child {
+    margin-bottom: 0;
+}
+
+.about-us-table__cell {
+    padding: 0;
+    display: inline-block;
+}
+
+.about-us-table__cell:last-child {
+    margin-right: 0;
+}
+
+.about-us-table__cell--value {
+    margin-right: 87px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #082362;
+    line-height: 1.083;
+}
+
+.about-us-table__cell--title {
+    margin-right: 111px;
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+
+.about-us-table__size {
+    margin-right: 106px;
+}
+
+/*form-and-about-us*/
+.form-and-about-us {
+    display: grid;
+    grid-template-columns: minmax(auto, 500px) minmax(auto, 600px);
+    grid-gap: 70px;
+}
+
+.form-and-about-us__item-layout {
+    grid-column: auto / 1 span;
+}
+
+/*contact-form*/
+.contact-form {
+    padding: 40px;
+    padding-top: 12px;
+    padding-right: 30px;
+    padding-left: 33px;
+    background-color: #082362;
+}
+
+.contact-form__title {
+    line-height: 1.666;
+    margin-bottom: 22px;
+}
+
+.contact-form__field {
+    width: 100%;
+    padding: 17px 28px;
+    color: #999999;
+}
+
+.contact-form__field--size {
+    min-height: 132px;
+}
+
+.contact-form__field::placeholder {
+    color: #999999;
+}
+
+.contact-form__autor-info {
+    display: grid;
+    grid-gap: 19px;
+}
+
+.contact-form__label {
+    width: 100%;
+}
+
+.contact-form__form {
+    display: grid;
+    grid-gap: 36px;
+}
+
+.contact-form__submit {
+    font-size: 17px;
+    line-height: 3.3;
+    min-width: 173px;
+    font-weight: 600;
+}
