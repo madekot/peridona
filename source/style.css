@@ -172,61 +172,71 @@ body {
 }
 
 /*main*/
+.main {
+    display: grid;
+}
+
 .main__organization-info-wrapper {
-    margin-bottom: -52px;
-    box-shadow:  0 -1px #55789c, 0 -5px #00346a, inset 0 5px #10205a;
+    /*margin-bottom: -52px;*/
+    /*box-shadow:  0 -1px #55789c, 0 -5px #00346a, inset 0 5px #10205a;*/
+    grid-column: 1 / auto;
+    box-shadow:  0 -1px #55789c;
     background-color: #091a51;
+    grid-row: 1 / auto;
 }
 
 .main__wrapper {
-    background-color: #ffffff;
+background-color: #ffffff;
 }
 
 .main__inner {
-    width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+width: 1170px;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
 }
 
 .main__organization-info {
-    display: flex;
-    position: relative;
-    z-index: 10;
+display: flex;
+position: relative;
+z-index: 10;
 }
 
 .main__organization-info-content {
-    box-sizing: border-box;
-    padding: 0 87px 0 117px;
-    margin-left: auto;
-    position: relative;
-    right: -105px;
+box-sizing: border-box;
+padding: 0 87px 0 117px;
+margin-left: auto;
+position: relative;
+right: -105px;
 }
 
 .main__banner-box {
+    grid-row: 1 / auto;
+    grid-column: 1 / auto;
     background-color: transparent;
     border-bottom: 1px solid transparent;
+    background-color: #ffffff;
 }
 
 .main__banner-wrapper {
-    position: relative;
-    background-color: #08174d;
-    background-image: url(image/banner__bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin-bottom: 130px;
-    background-size: cover;
+position: relative;
+background-color: #08174d;
+background-image: url(image/banner__bg.jpg);
+background-repeat: no-repeat;
+background-position: top center;
+margin-bottom: 130px;
+background-size: cover;
 }
 
 .main__banner {
-    padding-top: 88px;
-    position: relative;
-    bottom: -133px;
+padding-top: 88px;
+position: relative;
+bottom: -133px;
 }
 
 .main__form-and-about-us {
-    padding-top: 117px;
-    padding-bottom: 117px;
+padding-top: 117px;
+padding-bottom: 117px;
 }
 
 /*organization-info */
